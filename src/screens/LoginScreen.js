@@ -40,7 +40,7 @@ export default function LoginScreen() {
           onChangeText={setEmail}
         />
         <TextInput
-          style={styles.input}
+          style={styles.input2}
           placeholder="Senha"
           secureTextEntry
           value={password}
@@ -71,7 +71,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
@@ -97,6 +97,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 15,
   },
+
+  input2: {
+    width: '100%',
+    height: 50,
+    backgroundColor: '#D9D9D9',
+    borderRadius: 25,
+    paddingHorizontal: 17,
+    fontSize: 16,
+    borderColor: '#d9d9d9',
+    borderWidth: 1,
+  },
+
   button: {
     width: '100%',
     height: 55,
@@ -113,8 +125,10 @@ const styles = StyleSheet.create({
   forgotPasswordText: {
     color: '#393357',
     fontSize: 14,
-    padding: 10, 
     fontWeight: "bold",
+    marginBottom: 20,
+    paddingLeft: 10, 
+    marginTop: 10,
   },
   signupText: {
     color: '#393357',

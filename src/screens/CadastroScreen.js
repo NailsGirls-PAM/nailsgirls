@@ -54,7 +54,7 @@ export default function CadastroScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image source={require("../../assets/Logo.png")} style={styles.logo} />
+        <Image source={require("../img/logo.png")} style={styles.logo} />
       </View>
       <View style={styles.Form}>
         <TextInput
@@ -102,7 +102,7 @@ export default function CadastroScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#FFF",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -112,8 +112,8 @@ const styles = StyleSheet.create({
     padding: '0',
   },
   logo: {
-    width: 200,
-    height: 120,
+    width: 220,
+    height: 160,
     marginBottom: 60,
   },
   input: {
