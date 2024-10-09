@@ -46,17 +46,23 @@ export default function LoginScreen() {
           value={password}
           onChangeText={setPassword}
         />
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Entrar</Text>
-        </TouchableOpacity>
         
         <TouchableOpacity onPress={goToForgotPassword}>
           <Text style={styles.forgotPasswordText}>Esqueceu sua senha?</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity onPress={goToSignUp}>
-          <Text style={styles.signupText}>Não tem conta? Cadastre-se</Text>
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
+        
+        <TouchableOpacity onPress={goToSignUp}>
+          <Text style={styles.signupText}>Não possui umma conta?{" "}
+            <Text style={styles.signupText2}>Cadastre-se</Text>
+          </Text>
+        </TouchableOpacity>
+
+        
+
       </View>
     </View>
   );
@@ -72,8 +78,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
+    color: '#FF69B4',
     fontWeight: 'bold',
     marginBottom: 30,
+    padding: 40, 
   },
   form: {
     width: '100%',
@@ -96,7 +104,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
   },
   buttonText: {
     color: '#fff',
@@ -105,14 +112,22 @@ const styles = StyleSheet.create({
   },
   forgotPasswordText: {
     color: '#393357',
-    marginTop: 10,
     fontSize: 14,
-    textAlign: 'center',
+    padding: 10, 
+    fontWeight: "bold",
   },
   signupText: {
     color: '#393357',
     marginTop: 15,
     fontSize: 14,
     textAlign: 'center',
+  },
+
+  signupText2: {
+    color: '#393357',
+    marginTop: 15,
+    fontSize: 14,
+    textAlign: 'center',
+    fontWeight: "bold",
   },
 });
