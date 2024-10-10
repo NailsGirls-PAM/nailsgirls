@@ -40,10 +40,12 @@ export default function EsqueceuSenha() {
             <Text style={styles.buttonText}>Enviar</Text>
           </TouchableOpacity>
           {message ? <Text style={styles.message}>{message}</Text> : null}
-        </View>
-        <TouchableOpacity style={styles.goBackButton} onPress={() => navigation.goBack()}>
+
+          <TouchableOpacity style={styles.goBackButton} onPress={() => navigation.goBack()}>
           <Text style={styles.goBackText}>Voltar</Text>
-        </TouchableOpacity>
+          </TouchableOpacity>
+
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -60,6 +62,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 200,
   },
   title: {
     fontSize: 20,
@@ -69,6 +72,7 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     width: '100%',
+    height: '130%',
     backgroundColor: '#E5E5E5',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
@@ -80,6 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#000',
     marginBottom: 10,
+    fontWeight: 'bold',
   },
   input: {
     width: '100%',
@@ -95,10 +100,10 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     height: 45,
-    backgroundColor: '#3B3B98',
+    backgroundColor: '#393357',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 25,
   },
   buttonText: {
     color: '#FFFFFF',
