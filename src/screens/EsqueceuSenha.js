@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Alert, Image } from 'react-native';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from './firebaseconfig'; 
 import { useNavigation } from '@react-navigation/native';
@@ -23,6 +23,7 @@ export default function EsqueceuSenha() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Image style={styles.image} source={require('../img/redefinirsenha.png')} />  
       <View style={styles.innerContainer}>
         <Text style={styles.title}>Recupere sua senha</Text>
         <View style={styles.formContainer}>
@@ -48,6 +49,7 @@ export default function EsqueceuSenha() {
         </View>
       </View>
     </SafeAreaView>
+
   );
 }
 
@@ -55,30 +57,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-    justifyContent: 'center',
     alignItems: 'center',
   },
   innerContainer: {
     width: '100%',
+    height: '70%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 200,
+    marginTop:5,
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#000',
-    marginBottom: 40,
+    marginTop: -70,
+
   },
   formContainer: {
     width: '100%',
-    height: '130%',
+    height: '60%',
     backgroundColor: '#E5E5E5',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
     paddingTop: 30,
     paddingHorizontal: 20,
     alignItems: 'center',
+    marginTop: 30,
   },
   label: {
     fontSize: 14,
@@ -123,4 +127,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textDecorationLine: 'underline',
   },
+
+  image: {
+    height: 300,
+    width: 376,
+    
+}
+
 });
